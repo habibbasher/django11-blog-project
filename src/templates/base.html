@@ -5,19 +5,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Base Html</title>
+        <title>{% block head_title %}Habib.com{% endblock head_title %}</title>
     </head>
 
     <body>
-        {% if data_from_py %}
-        <h1>Hello Habib!!</h1>
-        <p>This is from html template</p>
-        <p>{{num}}</p>
-        {% endif %}
-        <div>
-            {% for some_item in some_list %} {% if some_item|divisibleby:"2" %}
-            <p>Even number {{ some_item }}</p>
-            {% endif %} {% endfor %}
+        <h1>Habib.com</h1>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <div class="container">
+            {% block content %}
+                Hello django
+            {% endblock content %}
         </div>
     </body>
 

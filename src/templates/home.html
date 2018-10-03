@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block head_title %}{{ block.super }}{% endblock head_title %}
+
+{% block content %}
+    <p>{{ block.super }}</p>
+    {% if data_from_py %}
+        <p>This is from html template</p>
+        <p>{{num}}</p>
+    {% endif %}
+    <div>
+        <h3>{{ block.super }}</h3>
+        {% for some_item in some_list %} {% if some_item|divisibleby:"2" %}
+        <p>Even number {{ some_item }}</p>
+        {% endif %} {% endfor %}
+    </div>
+{% endblock content %}
