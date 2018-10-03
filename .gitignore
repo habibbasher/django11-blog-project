@@ -1,0 +1,85 @@
+#Django
+settings.py
+
+# Ansible
+*.retry
+
+# Python bytecode:
+*.py[co]
+
+# Packaging files:
+*.egg*
+
+# Sphinx docs:
+build
+
+# Database files:
+*.db
+*.gz
+
+# Logs:
+*.log
+
+# Eclipse
+.project
+.pydevproject
+.settings
+
+#PyCharm
+.idea
+
+# Linux Editors
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+*.swp
+*.swo
+
+# Mac
+.DS_Store
+._*
+
+# intelliJ PyCharm
+/wammu/.idea/
+/venv
+.vscode/
+# Folders
+# !! please note: static WILL BE INCLUDED in the push to git
+# static
+# migrations/
+uploads/
+/wammu/media
+/wammu/wammu/local_settings.py
+/wammu/wammu/brew_patch.py
+/.Python
+/bin/
+/include/
+/lib/
+/djcelery/
+/wammu/pysimplesoap/
+
+Vagrantfile
+.vagrant/
+static/
+
+# Frontend
+*/node_modules/
+**/dist
+*/package-lock.json
+**/yarn.lock
+
+#VSCode
+.vscode/*
+
+# Tests
+.cache
+
+# Docker
+/docker/elasticsearch/*
+/docker/postgres/pg_data
+/docker/postgres/*.sql
