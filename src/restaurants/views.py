@@ -10,7 +10,13 @@ from django.shortcuts import render
 def home(request):
 
     num = random.randint(0, 10000000)
-    return render(
-        request, 'base.html',
-        {'data_from_py': 'This is coming from py file', 'num': num}
-    )
+    context = {
+        'data_from_py': True,
+        'num': num,
+        'some_list': [
+            num,
+            random.randint(0, 10000000),
+            random.randint(0, 10000000)
+        ]
+    }
+    return render(request, 'base.html', context)

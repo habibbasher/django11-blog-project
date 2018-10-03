@@ -9,10 +9,16 @@
     </head>
 
     <body>
+        {% if data_from_py %}
         <h1>Hello Habib!!</h1>
         <p>This is from html template</p>
-        <p>{{data_from_py}} {{num}}</p>
         <p>{{num}}</p>
+        {% endif %}
+        <div>
+            {% for some_item in some_list %} {% if some_item|divisibleby:"2" %}
+            <p>Even number {{ some_item }}</p>
+            {% endif %} {% endfor %}
+        </div>
     </body>
 
 </html>
